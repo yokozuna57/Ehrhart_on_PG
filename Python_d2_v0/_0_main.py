@@ -12,13 +12,15 @@ from gf_d2 import get_GF
 from strict_C2 import get_C2_strict
 from util_d2 import *
 
-data = tilingdata.t363243432434
+data = tilingdata.wakatsuki
+# data = tilingdata.t363243432434
 print("# V of quotient graph".ljust(30),":",data.c)
 
 is_UD = is_undirected(data)
 print("is_undirected".ljust(30),":",is_UD)
 
-x0=4
+x0=0
+# x0=4
 cs = get_cs(data,x0,10)
 print("coordination sequence".ljust(30),":",cs)
 
