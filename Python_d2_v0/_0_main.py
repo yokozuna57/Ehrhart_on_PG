@@ -4,6 +4,7 @@ import sympy
 
 from a_cyc import get_cyc
 from b_p import get_p
+from _1_cs import get_cs
 from _3_C1 import get_C1, get_C1_undirected
 from _5_C2 import get_C2, get_C2_strict_undirected
 from invariants_d2 import invariants_d2
@@ -18,6 +19,8 @@ is_UD = is_undirected(data)
 print("is_undirected".ljust(30),":",is_UD)
 
 x0=4
+cs = get_cs(data,x0,10)
+print("coordination sequence".ljust(30),":",cs)
 
 cyc = get_cyc(data)
 P = get_p(data,cyc)
