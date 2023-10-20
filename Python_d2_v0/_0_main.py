@@ -11,7 +11,7 @@ from gf_d2 import get_GF
 from strict_C2 import get_C2_strict
 from util_d2 import *
 
-data = sympify(tilingdata.t363243432434)
+data = tilingdata.t363243432434
 print("# V of quotient graph".ljust(30),":",data.c)
 
 is_UD = is_undirected(data)

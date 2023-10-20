@@ -1,5 +1,3 @@
-import tilingdata.wakatsuki
-import tilingdata.t363243432434
 import sympy
 
 from _1_cs import get_cs,get_cs_undirected
