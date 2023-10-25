@@ -11,6 +11,7 @@ from invariants_d2 import invariants_d2
 from gf_d2 import get_GF
 from strict_C2 import get_C2_strict
 from util_d2 import *
+from cycpoly import cyccl, get_R
 
 data = tilingdata.wakatsuki
 # data = tilingdata.t363243432434
@@ -35,15 +36,28 @@ print("C1".ljust(30),":",C1,"=",C1.evalf())
 C2 = get_C2(data,x0,cyc,P)
 print("C2'".ljust(30),":",C2,"=",C2.evalf())
 
-beta, denom, _, beta2= invariants_d2(data,x0,cyc,P,C1,C2)
+beta, denom, cpx, beta2, denom_pair= invariants_d2(data,x0,cyc,P,C1,C2)
 print("beta".ljust(30),":",beta,"=",beta.evalf())
 print("beta'".ljust(30),":",beta2,"=",beta2.evalf())
-print("exponents of denom.".ljust(30),":",denom)
+print("cpx".ljust(30),":",cpx)
+#print("exponents of denom.".ljust(30),":",denom)
+sympy.var('t')
+R = get_R(denom_pair,t)
+deg_R = sympy.degree(R,t)
+print("degree of R".ljust(30),":",deg_R)
+R_ = cyccl(R,t)
+print("R'".ljust(30),":",R_)
 
 gf = get_GF(data,x0,beta,denom)
-print("numerator".ljust(30),":",gf[0])
-print("denominator".ljust(30),":",gf[1])
+# print("numerator".ljust(30),":",gf[0])
+# print("denominator".ljust(30),":",gf[1])
 print("generating function".ljust(30),":",gf[2])
+temp = cyccl(gf[1],t)
+denom_=1
+for d in temp: denom_=denom_*(1-t**d)
+numer_=gf[0]*denom_/gf[1]
+print("numerator'".ljust(30),":",numer_)
+print("denominator'".ljust(30),":",denom_)
 
 print("Do you need the exact value of C2?(y/n)")
 res = input()

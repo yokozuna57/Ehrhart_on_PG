@@ -16,6 +16,7 @@ def invariants_d2(data,x0,cyc_supp,P,C1,C2):
     for x in num.keys():
         num[x]=len(num[x])
     denom=[]
+    denom_pair=[]
     loop_cnt=0
     for ii in range(len(P.vertices)):
         jj = ii+1
@@ -80,6 +81,8 @@ def invariants_d2(data,x0,cyc_supp,P,C1,C2):
         for i in range(len(cpxs)-1):
             if cpxs[i]==cpxs[i+1]:
                 if denom.count(x)==1: denom.append(x)
+        for i in range(len(cpxs)-1):
+            denom_pair.append((cpxs[i],cpxs[i+1]))
         for i in range(len(V)-1):
             # delta = {V[i],V[i+1]}
             beta_delta=sympy.Integer(0)
@@ -182,4 +185,4 @@ def invariants_d2(data,x0,cyc_supp,P,C1,C2):
             beta2=sympy.Max(beta2,beta2_delta)
     beta=beta+C2
     beta2=beta2+C2
-    return (beta,denom,cpx,beta2)
+    return (beta,denom,cpx,beta2,denom_pair)
