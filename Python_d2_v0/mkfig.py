@@ -7,7 +7,7 @@ def graphview(tdata):
     y=[((np.array([a0,a1])+np.array(tdata.pos[k]))*np.matrix(tdata.lattice_const))[0,1] for a0 in range(-N,N+1) for a1 in range(-N,N+1) for k in range(tdata.c)]
 
     #plt.grid(True)
-    plt.scatter(x, y, s=8, color="black") #散布図の描画
+    plt.scatter(x, y, s=8, color="black")
 
     for a0 in range(-N,N+1):
         for a1 in range(-N,N+1):
@@ -24,7 +24,7 @@ def graphview(tdata):
                         plt.plot(x,y,color='black',lw=0.5)
 
     
-    v00=(np.array([0,0])*np.matrix(tdata.lattice_const))#単位格子の描画
+    v00=(np.array([0,0])*np.matrix(tdata.lattice_const))#lattice
     v01=(np.array([0,1])*np.matrix(tdata.lattice_const))
     v10=(np.array([1,0])*np.matrix(tdata.lattice_const))
     v11=(np.array([1,1])*np.matrix(tdata.lattice_const))
@@ -46,33 +46,8 @@ def graphview(tdata):
     plt.show()
 
 
-def uvecplot2d(tdata):
-    P=get_p(tdata)
-    ptnum=len(P.points)
-
-    x=[P.points[i][0] for i in range(ptnum)] 
-    y=[P.points[i][1] for i in range(ptnum)]
- 
-    plt.grid(True)
-    plt.scatter(x, y, s=25, color="blue") #散布図の描画
-
-    for i in range(ptnum): #頂点にラベルを付ける
-        plt.annotate(i, (x[i], y[i]), fontsize=8)
-
-    plt.show()
-
-
 import tilingdata.cairo
 import tilingdata.t32434
-import tilingdata.t482
-import tilingdata.t346
-import tilingdata.snub632
-import tilingdata.t3464
-import tilingdata.t3122
-#import tilingdata.t363243432434
-#import tilingdata.t363243432434bai
-#import tilingdata.a250125
-#import tilingdata.a307270
 
 tdata=tilingdata.cairo
 
