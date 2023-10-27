@@ -20,13 +20,7 @@ def get_GF(data,s,beta,denom):
         f = f + cs[i] * sympy_t**i
     f = f*den
     f = sympy.polys.polytools.rem(f,sympy_t**(deg+1))
-    for d in denom:
-        if sympy.polys.polytools.rem(f,(1-sympy_t**d))==0:
-            den=den/(1-sympy_t**d)
-            f=sympy.polys.polytools.pquo(f,(1-sympy_t**d))
-    ret_numer = f
-    ret_denom = den
     gc = sympy.gcd(f,den)
     f = sympy.polys.polytools.quo(f,gc)
     den = sympy.polys.polytools.quo(den,gc)
-    return (ret_numer,ret_denom,f/den)
+    return (f,den,f/den)

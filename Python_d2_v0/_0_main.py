@@ -55,7 +55,7 @@ print("generating function".ljust(30),":",gf[2])
 temp = cyccl(gf[1],t)
 denom_=1
 for d in temp: denom_=denom_*(1-t**d)
-numer_=gf[0]*denom_/gf[1]
+numer_=sympy.polys.polytools.quo(gf[0]*denom_,gf[1])
 print("numerator'".ljust(30),":",numer_)
 print("denominator'".ljust(30),":",denom_)
 
