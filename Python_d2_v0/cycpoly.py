@@ -1,7 +1,7 @@
 import sympy
 
 def cyccl(poly,t):
-    N=2*sympy.degree(poly)**2 #polyが絶対値1以外の根を持つ場合にループがおきるのを防止. 2(nのオイラー数)^2 >= n。
+    N=2*sympy.degree(poly)**2 
     fl=sympy.factor_list(poly,t)
     cl=[]
     newcl=[]
