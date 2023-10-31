@@ -16,7 +16,7 @@ The folder `tilingdata` contains several examples. To calculate for other period
 
 ## reference
 
-[2] T. Inoue and Y. Nakamura, Stratified Ehrhart ring theory on periodic graphs, arXiv: ???
+[2] T. Inoue and Y. Nakamura, Stratified Ehrhart ring theory on periodic graphs, [arXiv: 2310.19569](https://arxiv.org/abs/2310.19569)
 
 ## License
 
