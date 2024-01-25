@@ -1,0 +1,8 @@
+# V of quotient graph          : 8
+# V of P                       : 22
+P-initial vertices             : [0]
+s: 0
+is_WA                          : True
+generating function            : (t**7 + 2*t**6 + 3*t**5 + 5*t**4 + 5*t**3 + 3*t**2 + 2*t + 1)/(-t**7 + 2*t**6 - 2*t**5 + 3*t**4 - 3*t**3 + 2*t**2 - 2*t + 1)
+numerator'                     : t**8 + 3*t**7 + 5*t**6 + 8*t**5 + 10*t**4 + 8*t**3 + 5*t**2 + 3*t + 1
+denominator'                   : (1 - t)*(1 - t**3)*(1 - t**4)

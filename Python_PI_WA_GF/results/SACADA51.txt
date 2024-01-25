@@ -1,0 +1,3 @@
+# V of quotient graph          : 4
+# V of P                       : 14
+P-initial vertices             : []

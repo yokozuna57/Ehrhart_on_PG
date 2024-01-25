@@ -1,0 +1,8 @@
+# V of quotient graph          : 6
+# V of P                       : 14
+P-initial vertices             : [0]
+s: 0
+is_WA                          : True
+generating function            : (t**3 + t**2 + t + 1)/(-t**3 + 3*t**2 - 3*t + 1)
+numerator'                     : t**3 + t**2 + t + 1
+denominator'                   : (1 - t)**3

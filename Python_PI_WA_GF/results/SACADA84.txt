@@ -1,0 +1,6 @@
+# V of quotient graph          : 24
+# V of P                       : 38
+P-initial vertices             : [0]
+s: 0
+is_WA                          : unknown
+GF                             : -
